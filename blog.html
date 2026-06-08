@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Blog | NubiaMeow</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="nav nav-tabs">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link" href="downloads.html">Downloads</a>
+            <a class="nav-link active" aria-current="page" href="#">Blog</a>
+            <a class="nav-link" href="music.html">Music</a>
+        </nav>
+        <div class="container-md text-center">
+            <h1>Blog</h1>
+            <div class="card mb-3">
+                <div class="card-header">
+                    Hacking Around on Calamares
+                </div>
+                <div class="card-body text-start">
+                    <p>
+                        At work, we have certain requirements for a user profile.
+                        UID and GID must be 1000 for things to run smoothly with our (somewhat ancient) network share.
+                        I've been working on creating a generic image that can just be written to a machine with minimal need for further setup.
+                        To do this, I decided to use Kubuntu's OEM install mode.
+                        This creates a temporary user which can be used to install all the required packages, etc.
+                        Once you're done configuring the system, you can then exit OEM mode and reboot the machine.
+                        You'll then be prompted to create a new user, which is fine.
+                    </p>
+                    <p>
+                        Except...
+                    </p>
+                    <p>
+                        This user is technically the <i>second</i> user on the machine (with the OEM user being the first).
+                        This means that this new user will be created with UID and GID 1001 by default.
+                        Unfortunately, Calamares, the installer used by Kubuntu, does not natively support setting the UID and GID of the created user.
+                        Thankfully, the fix was a few lines added to the "users" module and now the new user will always have the correct UID and GID.
+                    </p>
+                    <p>
+                        Someday soon I hope to polish the code up and allow this to be configured via Calamares' config files but this requires getting more comfortable with QT5 first.
+                    </p>
+                </div>
+                <div class="card-footer text-body-secondary">
+                    2026-06-08 13:04
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header">
+                    Reinstalling Windows (*sigh*)
+                </div>
+                <div class="card-body text-start">
+                    <p>
+                        I have an Elgato HD60 Pro PCIe card which is, as far as I can tell, totally incompatible with Linux.
+                        I've been tinkering with it for a few days now but I've finally resigned myself to the fact that it's too much work with the move and EMF 2026 coming up to get it working (not that I have any idea how I'd go about it).
+                        I have some minimal experience with Linux driver development and making this a project is way outside my comfort zone.
+                        And so, it is with great sadness that I spent an evening reinstalling Windows 11.
+                    </p>
+                    <p>
+                        Hey, at least I can use Ableton again...
+                    </p>
+                </div>
+                <div class="card-footer text-body-secondary">
+                    2026-06-08 12:39
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+</html>
