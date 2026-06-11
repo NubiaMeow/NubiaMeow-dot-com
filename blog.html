@@ -18,6 +18,23 @@
             <h1>Blog</h1>
             <div class="card mb-3">
                 <div class="card-header">
+                    Code Point 437 in C++
+                </div>
+                <div class="card-body text-start">
+                    <p>
+                        In my upcoming game, I'm using Dwarf Fortress style spritesheets.
+                        These spritesheets are mimicing the original IBM PC character set, also known as Code Point 437.
+                        Working with this character set in C++ has been a pretty big headache, as the UTF-8 versions of some of the characters in this set are of type <code>wchar_t</code>.
+                        I worked around this by creating a lookup table which I generated using python's <code>encodings.cp437</code> class.
+                        The downside is that all my strings now have to be <code>std::wstring</code> instances.
+                    </p>
+                </div>
+                <div class="card-footer text-body-secondary">
+                    2026-06-11 20:46
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header">
                     Hacking Around on Calamares
                 </div>
                 <div class="card-body text-start">
