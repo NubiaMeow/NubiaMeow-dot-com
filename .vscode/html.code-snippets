@@ -85,7 +85,7 @@
 			"\t\t<p>$2</p>",
 			"\t</div>",
 			"\t<div class=\"card-footer text-body-secondary\">",
-			"\t\t<a class=\"btn active\" href=\"$3\">GitHub Repo</a>",
+			"\t\t<a class=\"btn active\" href=\"$3\"><i class=\"bi bi-github\"></i>GitHub Repo</a>",
 			"\t</div>",
 			"</div>"
 		]
