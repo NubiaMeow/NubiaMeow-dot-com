@@ -18,6 +18,28 @@
             <h1>Blog</h1>
             <div class="card mb-3">
                 <div class="card-header">
+                    SUPERUSER
+                </div>
+                <div class="card-body text-start">
+                    <p>
+                        The game I mentioned in the last post now has a name: 'SUPERUSER'!
+                        I've got the character rendering working perfectly now.
+                        I render the screen to a texture at the native resolution of the characters (6x8px in this case).
+                        This texture is then scaled to the window, leaving at least a 5% gap for the border. 
+                    </p>
+                    <p>
+                        The border is rendered as triangles with <code>SDL_RenderGeometry</code> so that I don't have to worry too much about scaling artifacts.
+                    </p>
+                </div>
+                <a href="img/SUPERUSER-1.png">
+                    <img src="img/SUPERUSER-1.png" class="card-img">
+                </a>
+                <div class="card-footer text-body-secondary">
+                    2026-06-13 01:47
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header">
                     Code Point 437 in C++
                 </div>
                 <div class="card-body text-start">
