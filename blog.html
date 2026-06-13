@@ -23,7 +23,7 @@
                 <div class="card-body text-start">
                     <p>
                         In my upcoming game, I'm using Dwarf Fortress style spritesheets.
-                        These spritesheets are mimicing the original IBM PC character set, also known as Code Point 437.
+                        These spritesheets are mimicking the original IBM PC character set, also known as Code Point 437.
                         Working with this character set in C++ has been a pretty big headache, as the UTF-8 versions of some of the characters in this set are of type <code>wchar_t</code>.
                         I worked around this by creating a lookup table which I generated using python's <code>encodings.cp437</code> class.
                         The downside is that all my strings now have to be <code>std::wstring</code> instances.
